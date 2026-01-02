@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nataly Sanchez - Community Manager</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" th:href="@{/resources/css/layout.css}">
+        <link rel="stylesheet" th:href="@{/resources/css/hero.css}">
+        <link rel="stylesheet" th:href="@{/resources/css/aportes.css}">
+        <link rel="stylesheet" th:href="@{/resources/css/sobre-mi.css}">
+        <link rel="stylesheet" th:href="@{/resources/css/cta.css}">
+
+
+    </head>
+
+
+    <body>
+
+        <!-- HEADER (fragment) -->
+        <div th:replace="fragments/header :: header"></div>
+
+
+
+
+
+
+        <!-- HERO -->
+        <section id="hero" class="hero-parallax text-white">
+            <div class="container py-5">
+                <div class="row align-items-center">
+
+
+                    <!-- TEXTO -->
+                    <div class="col-md-6 hero-text reveal reveal-left">
+
+
+                        <h1 class="fw-bold hero-title">
+                            <span id="typing-text"></span><span class="typing-cursor">|</span>
+                        </h1>
+
+                        <p class="lead hero-subtitle mt-3">
+
+                            Community Manager
+                            <span class="highlight">
+                                Apasionada por la comunicación digital, la creación de contenido y el
+                                aprendizaje constante dentro de equipos de marketing.
+                            </span>
+
+                        </p>
+                        <p class="hero-skills">
+                            Especialidades: 
+                            <span class="skill skill-instagram">Instagram</span> · 
+                            <span class="skill skill-facebook">Facebook Ads</span> · 
+                            <span class="skill skill-content">Creación de contenido</span> · 
+                            <span class="skill skill-branding">Branding digital</span> · 
+                            <span class="skill skill-customer">Atención al cliente</span>
+                        </p>
+                        <div class="mt-4">
+                            <a th:href="@{/portafolio}" class="btn btn-hero me-2">Ver portafolio</a>
+                            <a th:href="@{/contacto}" class="btn btn-outline-hero">Contactar</a>
+                        </div>
+                        <p class="mt-3 small hero-footer">
+                            Formación académica · Proyectos prácticos · <span class="text-warning fw-bold">En constante aprendizaje y actualización</span>
+                        </p>
+                    </div>
+
+                    <!-- Imagen cuadrada con marco creativo -->
+                    <div class="col-md-6 text-center hero-img-container animate-right">
+                        <div class="hero-img-frame">
+                            <img th:src="@{/resources/img/perfil.jpeg}"
+                                 alt="Nataly Sanchez"
+                                 class="img-fluid hero-img-square shadow">
+
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- APORTES -->
+
+        <section id="aportes" class="aportes-section py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title stagger-title">
+                        <span>En</span>
+                        <span>qué</span>
+                        <span>puedo</span>
+                        <span>aportar</span>
+                    </h2>
+
+                    <p class="section-subtitle mx-auto">
+                        Experiencia orientada a <strong>gestión de redes sociales</strong>,
+                        <strong>creación de contenido digital</strong> y
+                        <strong>comunicación con audiencias</strong>, aportando valor
+                        a equipos de marketing y marcas en crecimiento.
+                    </p>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-12 col-md-4 d-flex reveal delay-1">
+                        <div class="aporte-card text-center w-100">
+                            <div class="aporte-icon">
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                            <h5>Gestión de Redes Sociales</h5>
+                            <p>
+                                Apoyo en la administración de Instagram y Facebook,
+                                programación de contenido y seguimiento de métricas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 d-flex reveal delay-2">
+                        <div class="aporte-card text-center w-100">
+                            <div class="aporte-icon">
+                                <i class="bi bi-pencil-square"></i>
+                            </div>
+                            <h5>Creación de Contenido Digital</h5>
+                            <p>
+                                Diseño de publicaciones, stories y reels alineados
+                                a identidad visual y objetivos de marca.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 d-flex reveal delay-3">
+                        <div class="aporte-card text-center w-100">
+                            <div class="aporte-icon">
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+                            <h5>Atención a la Comunidad</h5>
+                            <p>
+                                Gestión de mensajes y comentarios fortaleciendo
+                                la relación con la audiencia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- SOBRE MÍ -->
+        <section id="sobre-mi" class="sobre-mi-section py-5">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- Imagen con vidrio y sombra -->
+                    <!-- Video clickeable -->
+                    <div class="col-md-5 text-center">
+                        <div class="sobre-mi-img video-wrapper">
+
+                            <video id="sobreMiVideo"
+                                   class="img-fluid rounded-4"
+                                   controls
+                                   preload="metadata">
+                                <source src="/PortafolioNataly/resources/video/sobreMiVideo.mp4"
+                                        type="video/mp4">
+                                Tu navegador no soporta video HTML5.
+                            </video>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Contenido -->
+                    <div class="col-md-7">
+                        <!-- Tag azul glass -->
+                        <span class="sobre-mi-tag">Sobre mí</span>
+
+                        <!-- Título con gradiente azul -->
+                        <h2 class="sobre-mi-title mt-3">
+                            Community Manager enfocada en <span>conectar marcas</span> con personas
+                        </h2>
+
+                        <!-- Texto premium -->
+                        <p class="sobre-mi-text mt-3">
+                            Soy <strong>Community Manager junior en formación</strong>, con interés en la gestión estratégica
+                            de redes sociales, creación de contenido y construcción de comunidades digitales auténticas.
+                        </p>
+
+                        <p class="sobre-mi-text">
+                            Me adapto fácilmente a la identidad de cada marca, cuidando el tono de comunicación,
+                            la coherencia visual y la relación con la audiencia.
+                        </p>
+
+                        <!-- Lista simple pero elegante -->
+                        <ul class="sobre-mi-list mt-3">
+                            <li>Comunicación clara, empática y profesional</li>
+                            <li>Organización, responsabilidad y constancia</li>
+                            <li>Aprendizaje continuo y mejora constante</li>
+                        </ul>
+
+                        <!-- Botón Apple glass -->
+                        <a th:href="@{/contacto}" class="sobre-mi-btn mt-4 d-inline-block">
+                            Hablemos
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- CTA FINAL -->
+        <section id="cta" class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Abierta a nuevas oportunidades laborales</h2>
+                    <p>
+                        Community Manager con enfoque creativo y estratégico.
+                        Abierta a nuevas oportunidades laborales y entrevistas.
+                    </p>
+
+                    <div class="cta-actions">
+
+                        <a href="https://www.linkedin.com/in/nataly-sánchez-982253398/"
+                           class="btn btn-primary btn-lg"
+                           target="_blank"
+                           rel="noopener">
+                            💼 Ver LinkedIn
+                        </a>
+
+                        <a href="/PortafolioNataly/resources/docs/Cubase12.pdf"
+                           class="btn btn-primary"
+                           target="_blank"
+                           download>
+                            📄 ver CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- FOOTER (fragment) -->
+        <div th:replace="fragments/footer :: footer"></div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+        <script th:src="@{/resources/js/header.js}"></script>
+        <script th:src="@{/resources/js/reveal.js}"></script>
+        <script th:src="@{/resources/js/ux.js}"></script>
+        <script th:src="@{/resources/js/hero.js}"></script>
+
+        <!-- ICONO WHATSAPP FLOTANTE -->
+        <a href="https://wa.me/51955356124" target="_blank" class="whatsapp-float">
+            <img th:src="@{/resources/img/wassap.png}" alt="WhatsApp" />
+
+        </a>
+
+    </body>
+
+
+
+
+
+
+</html>

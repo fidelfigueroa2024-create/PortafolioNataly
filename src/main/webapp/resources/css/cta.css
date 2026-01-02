@@ -1,0 +1,129 @@
+
+/* ================================
+   CTA EMPLEO PROFESIONAL
+================================ */
+
+.cta-section {
+    padding: 90px 0;
+    background:
+        radial-gradient(circle at top right, rgba(106,17,203,0.35), transparent 60%),
+        radial-gradient(circle at bottom left, rgba(37,117,252,0.35), transparent 60%),
+        linear-gradient(135deg, #0b1120, #121a2f);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box {
+    max-width: 780px;
+    margin: auto;
+    padding: 60px 50px;
+    text-align: center;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 26px;
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.15);
+
+    animation: fadeUp 0.9s ease both;
+}
+
+.cta-box h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.cta-box p {
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+/* ================================
+   BOTONES
+================================ */
+
+.cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-actions .btn {
+    padding: 14px 36px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 50px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+/* botón CV */
+.cta-actions .btn-primary {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    border: none;
+    box-shadow: 0 12px 30px rgba(37,117,252,0.45);
+}
+
+.cta-actions .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 45px rgba(37,117,252,0.6);
+}
+
+/* botón contacto */
+.cta-actions .btn-outline-light {
+    border: 1.5px solid rgba(255,255,255,0.6);
+    color: #fff;
+}
+
+.cta-actions .btn-outline-light:hover {
+    background: #ffffff;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* ================================
+   ANIMACIÓN
+================================ */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+    .cta-box {
+        padding: 45px 28px;
+    }
+
+    .cta-box h2 {
+        font-size: 1.9rem;
+    }
+
+    .cta-box p {
+        font-size: 1.05rem;
+    }
+}

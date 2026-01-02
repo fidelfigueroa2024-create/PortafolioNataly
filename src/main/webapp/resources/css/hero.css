@@ -1,0 +1,224 @@
+/* ===============================
+   RESET Y BASE
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background: #0b0f2a;
+    color: #ffffff;
+}
+
+/* ===============================
+   HEADER / NAVBAR
+================================ */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: #050b1e;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+    padding-top: 90px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 3rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: #ffd700;
+}
+
+.hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #f1f1f1;
+}
+
+/* ===============================
+   CHIPS / ESPECIALIDADES
+================================ */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+}
+
+.chip {
+    background: rgba(255,255,255,0.15);
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+}
+
+/* ===============================
+   BOTONES
+================================ */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff6a00, #ff9472);
+    color: #fff;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    padding: 0.9rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ===============================
+   TEXTO SECUNDARIO
+================================ */
+.hero-footer {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+}
+
+.hero-footer span {
+    color: #ffd700;
+    font-weight: 600;
+}
+
+/* ===============================
+   IMAGEN PERFIL
+================================ */
+.profile-wrapper {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img {
+    width: 220px;
+    height: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 5px solid transparent;
+    background: linear-gradient(45deg, #ff00cc, #3333ff) border-box;
+}
+
+/* ===============================
+   WHATSAPP FLOAT
+================================ */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.8rem;
+    z-index: 999;
+}
+
+/* ===============================
+   RESPONSIVE TABLET
+================================ */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .profile-img {
+        width: 260px;
+        height: 260px;
+    }
+}
+
+/* ===============================
+   RESPONSIVE DESKTOP
+================================ */
+@media (min-width: 1024px) {
+    .hero {
+        padding-top: 110px;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content {
+        max-width: 1000px;
+    }
+}

@@ -1,0 +1,384 @@
+
+
+
+
+
+
+
+/* ================================
+   VARIABLES DE MARCA
+================================ */
+:root {
+    --primary: #2575fc;
+    --secondary: #6a11cb;
+    --gold: #ffd700;
+    --dark: #000;
+    --light: #fff;
+}
+
+/* ================================
+   BODY FIX (navbar fixed)
+================================ */
+body {
+    padding-top: 80px; /* altura real del navbar */
+}
+
+/* ================================
+   NAVBAR BASE (APPLE GLASS)
+   🔴 FIX REAL AQUÍ
+================================ */
+.navbar-custom {
+    position: fixed;           /* 👈 CAMBIO CLAVE */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+
+    background: rgba(11,17,32,0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    transition:
+        transform 0.45s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+/* ocultar / mostrar */
+.navbar-custom.hide {
+    transform: translateY(-100%);
+}
+
+/* sombra al scroll */
+.navbar-custom.scrolled {
+    background: rgba(11,17,32,0.97);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.55);
+}
+
+/* transparente SOLO sobre hero */
+.navbar-custom.transparent {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+/* ================================
+   BRAND
+================================ */
+.navbar-custom .navbar-brand {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 1.55rem;
+    letter-spacing: 0.4px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* ================================
+   LINKS
+================================ */
+.navbar-custom .nav-link {
+    position: relative;
+    color: rgba(255,255,255,0.88) !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    padding: 6px 2px;
+
+    transition:
+        color 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+.navbar-custom .nav-link:hover {
+    color: var(--gold) !important;
+    opacity: 1;
+}
+
+
+@media (max-width: 991px) {
+
+
+
+
+    .navbar-collapse {
+        position: relative;
+        pointer-events: auto !important;
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(12px);
+        padding: 20px;
+        border-radius: 18px;
+        margin-top: 12px;
+        animation: menuFade 0.45s cubic-bezier(0.25,1,0.5,1);
+        z-index: 9999;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 1.15rem;
+        padding: 14px 0;
+    }
+    .navbar-nav a,
+    .navbar-nav .btn {
+        pointer-events: auto !important;
+        z-index: 10000;
+        position: relative;
+    }
+
+}
+
+
+
+
+/* ================================
+   ANIMACIÓN MOBILE MENU
+================================ */
+@keyframes menuFade {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================================
+   FOOTER PREMIUM (NO TOCADO)
+================================ */
+.footer-custom {
+    background: linear-gradient(
+        90deg,
+        var(--secondary),
+        var(--primary)
+        );
+    color: var(--light);
+    padding: 40px 0;
+}
+
+.footer-custom p {
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-custom strong {
+    color: var(--gold);
+}
+
+.footer-custom a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-custom a:hover {
+    color: var(--gold);
+}
+
+/* ===============================
+   FIX NAVBAR TRANSPARENT (MEJORADO)
+=============================== */
+.navbar-custom.transparent {
+    background: rgba(11, 17, 32, 1); /* 👈 MÁS OSCURO */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+}
+
+
+/* letras visibles */
+.navbar-custom.transparent .nav-link,
+.navbar-custom.transparent .navbar-brand {
+    color: #ffffff !important;
+}
+
+/* hover */
+.navbar-custom.transparent .nav-link:hover {
+    color: var(--gold) !important;
+}
+
+/* botón hablemos */
+.navbar-custom.transparent .btn {
+    color: #fff;
+    border-color: #fff;
+}
+.navbar-custom .navbar-toggler {
+    border-color: rgba(255,255,255,0.6);
+}
+
+.navbar-custom .navbar-toggler-icon {
+    filter: invert(1);
+}
+/* ================================
+   TIPOGRAFÍA NAVBAR
+================================ */
+.navbar-custom {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+
+.navbar-custom .nav-link.active {
+    color: var(--gold) !important;
+    font-weight: 600;
+    opacity: 1;
+}
+.navbar-custom .btn {
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    border-radius: 999px;
+}
+
+
+
+/* =========================================
+   HEADER PREMIUM – APPLE STYLE
+========================================= */
+
+/* TIPOGRAFÍA GENERAL */
+.navbar-custom {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: 0.4px;
+}
+
+/* BRAND */
+.navbar-custom .navbar-brand {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: #ffffff !important;
+    transition: all 0.35s ease;
+}
+
+.navbar-custom .navbar-brand:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   LINKS – ESTILO PREMIUM
+========================= */
+.navbar-custom .nav-link {
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.92) !important;
+
+    padding: 8px 14px;
+    margin: 0 6px;
+
+    transition:
+        color 0.35s ease,
+        transform 0.35s ease,
+        text-shadow 0.35s ease;
+}
+
+/* GLOW SUAVE */
+.navbar-custom .nav-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(255,255,255,0.35); /* glow neutro */
+}
+
+
+
+/* SUBRAYADO ANIMADO */
+.navbar-custom .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: -6px;
+    width: 80%;
+    height: 2px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #ffd700, #ff8c00);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.45s cubic-bezier(0.25,1,0.5,1);
+}
+
+.navbar-custom .nav-link:hover::after,
+.navbar-custom .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+/* LINK ACTIVO */
+.navbar-custom .nav-link.active {
+    color: #ffd700 !important;
+    font-weight: 600;
+}
+
+/* =========================
+   BOTÓN HABLEMOS – PREMIUM
+========================= */
+.navbar-custom .btn {
+    border-radius: 999px;
+    padding: 7px 26px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+.navbar-custom .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255,215,0,0.35);
+}
+
+/* =========================
+   CONTRASTE GLASS PERFECTO
+========================= */
+.navbar-custom {
+    background: rgba(11,17,32,0.82);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   MOBILE – MISMA CALIDAD
+========================= */
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        background: rgba(11,17,32,0.95);
+        backdrop-filter: blur(18px);
+        border-radius: 18px;
+        padding: 22px;
+    }
+
+    .navbar-custom .nav-link {
+        font-size: 1.1rem;
+        padding: 14px 0;
+        margin: 0;
+    }
+}
+/* TEST DE IMPACTO VISUAL */
+.navbar-custom {
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.45),
+        inset 0 -1px 0 rgba(255,255,255,0.06);
+}
+.navbar-custom .nav-link {
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+/* 🔥 FIX DOBLE RAYO – FOCUS MOBILE */
+.navbar-custom .nav-link:focus,
+.navbar-custom .nav-link:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+}

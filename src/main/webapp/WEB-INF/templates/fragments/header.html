@@ -1,0 +1,60 @@
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+
+            <!-- LOGO -->
+            <a class="navbar-brand fw-bold fs-3" th:href="@{/home}">
+                Nataly Sanchez
+            </a>
+
+            <!-- TOGGLER -->
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!-- INDICADOR -->
+                <span class="nav-indicator d-none d-lg-block"></span>
+
+                <ul class="navbar-nav ms-auto text-center align-items-lg-center">
+
+                    <!-- INICIO -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold"
+                           th:href="@{/home}"
+                           th:classappend="${#httpServletRequest.requestURI.endsWith('/home')} ? ' active'">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <!-- PORTAFOLIO -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold"
+                           th:href="@{/portafolio}"
+                           th:classappend="${#httpServletRequest.requestURI.endsWith('/portafolio')} ? ' active'">
+                            Portafolio
+                        </a>
+                    </li>
+
+                    <!-- CONTACTO (UNO SOLO, BIEN HECHO) -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold"
+                           th:href="@{/contacto}"
+                           th:classappend="${#httpServletRequest.requestURI.endsWith('/contacto')} ? ' active '">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
