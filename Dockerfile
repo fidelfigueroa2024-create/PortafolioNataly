@@ -1,17 +1,17 @@
 # ==============================
 # Stage 1: Build WAR con Maven
 # ==============================
-FROM maven:3.9.0-jdk-17-openjdk AS build
+FROM maven:3.9.0-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
-# Copiar pom.xml primero para aprovechar cache de dependencias
+# Copiar pom.xml primero para cache de dependencias
 COPY pom.xml .
 
-# Copiar el código fuente
+# Copiar código fuente
 COPY src ./src
 
-# Construir el WAR sin tests
+# Construir WAR sin tests
 RUN mvn clean package -DskipTests
 
 # ==============================
@@ -30,3 +30,4 @@ EXPOSE 8080
 
 # Comando para arrancar Tomcat
 CMD ["catalina.sh", "run"]
+
